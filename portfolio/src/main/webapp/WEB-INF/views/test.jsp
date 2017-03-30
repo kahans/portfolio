@@ -23,7 +23,9 @@ body, h1, h2, h3, h4, h5 {
 body {
 	font-size: 16px;
 }
-
+td, th {
+    padding: 5px 10px 5px 10px;
+}
 .w3-half img {
 	margin-bottom: -6px;
 	margin-top: 16px;
@@ -36,8 +38,14 @@ body {
 }
 
 .grey01{
-    height: 460px;
+    height: 720px;
 }
+
+@media (max-width: 760px) {
+.grey01{
+    height: 480px;
+}
+
 </style>
 <body>
 
@@ -55,8 +63,10 @@ body {
 		</div>
 		<div class="w3-bar-block">
 			<a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">home</a>
-			<a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project</a> 
-			<a href="#skill" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Skill</a> 
+			<a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project</a>
+			<a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">profile</a>
+			<a href="#skill" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Skill</a>
+			
 		</div>
 	</nav>
 
@@ -252,6 +262,39 @@ body {
 
 			</div>
 		</div><!-- /Modal -->
+
+		<div class="w3-container" id="profile" style="margin-top: 75px">
+			<h1 class="w3-xxxlarge w3-text-red">
+				<b>profile.</b>
+			</h1>
+			<hr style="width: 50px; border: 5px solid red" class="w3-round">
+			<table>
+				<tr>
+					<th><h4>기본정보</h4></th>
+				</tr>
+				<tr>
+					<td rowspan="3"><img src="${pageContext.request.contextPath}/resources/img/07_이명철.jpg" /></td>
+					<th colspan="1">이름</th>
+					<th colspan="1">나이/성별</th>
+				</tr>
+				<tr>
+					<td colspan="1">이명철</td>
+					<td colspan="1">1989년(29세) | 男</td>
+				</tr>
+				<tr>
+					<th>연락처</th>
+					<td>010-3420-8912</td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+					<td>myeong3695@naver.com</td>
+				</tr>
+				<tr>
+					<th>깃허브</th>
+					<td>https://github.com/myeong3695</td>
+				</tr>
+			</table>
+		</div>
 
 		<!-- skill -->
 		<div class="w3-container" id="skill" style="margin-top: 75px">
